@@ -1,4 +1,4 @@
-function prismplot(Y,color,x,opt,dotson)
+ function prismplot(Y,color,x,opt,dotson)
         if nargin<2 || isempty(color)
         color2=cell(1,length(Y));
         color=color2;
