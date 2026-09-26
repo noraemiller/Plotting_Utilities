@@ -16,13 +16,12 @@ elseif opt==1
 else
 %     y1=(nanmax(Y,[],1));
 %     y2=(nanmin(Y,[],1));
-    y1=quantile(Y,0.975);
-    y2=quantile(Y,0.025);
+    y1=quantile(Y,0.975,1);
+    y2=quantile(Y,0.025,1);
 end
     X2 = [X fliplr(X)];
     Y = [y1 fliplr(y2)];
     hold on
-    
     patch(X2,Y,color1,'LineStyle','none','LineWidth',1,'FaceAlpha',.2);
     hold on
     plot(X,Ymean,'-','Color',color2)
